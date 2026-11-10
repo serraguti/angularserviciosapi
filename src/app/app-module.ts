@@ -8,11 +8,13 @@ import { ComicsComponent } from './components/comics-component/comics-component'
 import { ServiceComics } from './services/service.comics';
 import { ServiceClientes } from './services/service.clientes';
 import { ClientesComponent } from './components/clientes-component/clientes-component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [App, HomeComponent, MenuComponent, ComicsComponent, ClientesComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [ServiceComics, ServiceClientes, provideBrowserGlobalErrorListeners()],
+  providers: [ServiceComics, ServiceClientes
+    , provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
 export class AppModule {}
