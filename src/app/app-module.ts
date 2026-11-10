@@ -5,11 +5,15 @@ import { App } from './app';
 import { HomeComponent } from './components/home-component/home-component';
 import { MenuComponent } from './components/menu-component/menu-component';
 import { ComicsComponent } from './components/comics-component/comics-component';
+import { ServiceComics } from './services/service.comics';
 
 @NgModule({
   declarations: [App, HomeComponent, MenuComponent, ComicsComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [provideBrowserGlobalErrorListeners()],
+  providers: [
+    ServiceComics,
+    provideBrowserGlobalErrorListeners()
+  ],
   bootstrap: [App],
 })
 export class AppModule {}
