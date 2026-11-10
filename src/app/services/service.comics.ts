@@ -3,6 +3,25 @@ import { Comic } from "../models/comic";
 
 @Injectable()
 export class ServiceComics {
+    //para tener claro los metodos asincronos, por norma
+    //deberíamos poner la palabra async al final del nombre del 
+    //método
+    async getComicsAsync(): Promise<Comic[]> {
+        let path = "documents/comics.json"
+        //realizamos la petición
+        let response = await fetch(path);
+        //convertimos los datos a json
+        let datos = await response.json()
+        //declaramos un array para extraer los datos
+        let arraycomics: Comic[] = [];
+        //recorremos los datos
+        for (let elem of datos){
+            let comic = new Comic(elem.titulo, elem.imagen, elem.descripcion);
+            arraycomics.push(comic);            
+        }
+        return arraycomics;
+    }
+
     //inventamos un metodo para visualizar
     //como funciona
     getSaludo(): string {
