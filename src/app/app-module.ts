@@ -6,14 +6,13 @@ import { HomeComponent } from './components/home-component/home-component';
 import { MenuComponent } from './components/menu-component/menu-component';
 import { ComicsComponent } from './components/comics-component/comics-component';
 import { ServiceComics } from './services/service.comics';
+import { ServiceClientes } from './services/service.clientes';
+import { ClientesComponent } from './components/clientes-component/clientes-component';
 
 @NgModule({
-  declarations: [App, HomeComponent, MenuComponent, ComicsComponent],
+  declarations: [App, HomeComponent, MenuComponent, ComicsComponent, ClientesComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [
-    ServiceComics,
-    provideBrowserGlobalErrorListeners()
-  ],
+  providers: [ServiceComics, ServiceClientes, provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
 export class AppModule {}
