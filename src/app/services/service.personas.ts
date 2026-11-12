@@ -21,4 +21,13 @@ export class ServicePersonas {
             this._http.get<Persona[]>(url)
         )
     }
+
+    async findPersonaAsync(id: number): Promise<Persona>{
+        //api/personas/1
+        let request = "api/personas/" + id;
+        let url = Global.apipersonas + request;
+        return firstValueFrom(
+            this._http.get<Persona>(url)
+        )
+    }
 }
