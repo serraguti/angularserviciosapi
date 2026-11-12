@@ -6,11 +6,14 @@
         Buscar
     </button>
 </form>
-<div style="background-color: lightgreen;">
-    <h2>{{person.nombre}}</h2>
-    <p>{{person.email}}</p>
-    <p>{{person.edad}}</p>
-</div>
+@if (person){
+    <div style="background-color: lightgreen;">
+        <h2>{{person.nombre}}</h2>
+        <p>{{person.email}}</p>
+        <p>{{person.edad}}</p>
+    </div>
+}
+
 <button (click)="cargarPersonas()" class="btn btn-info">
     Mostrar personas
 </button>

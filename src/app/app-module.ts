@@ -22,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     ClientesComponent,
     PersonasApiComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule
+    , FormsModule],
   providers: [
     provideHttpClient(), ServicePersonas,
     ServiceComics, ServiceClientes, provideBrowserGlobalErrorListeners()

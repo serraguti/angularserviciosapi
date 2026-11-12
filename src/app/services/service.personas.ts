@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Persona } from "../models/persona";
 import { firstValueFrom } from "rxjs";
 import { Global } from "../global";
+import { environment } from "../../environments/environment.development";
 
 @Injectable()
 export class ServicePersonas {
@@ -14,7 +15,7 @@ export class ServicePersonas {
     async getPersonasAsync(): Promise<Persona[]>{
         //necesitamos la url de nuestro servicio
         let request = "api/personas";
-        let url = Global.apipersonas + request
+        let url = environment.apipersonas + request
         //devolvemos el primer valor del get
         return firstValueFrom(
             //hacemos la petición con http
@@ -25,7 +26,7 @@ export class ServicePersonas {
     async findPersonaAsync(id: number): Promise<Persona>{
         //api/personas/1
         let request = "api/personas/" + id;
-        let url = Global.apipersonas + request;
+        let url = environment.apipersonas + request;
         return firstValueFrom(
             this._http.get<Persona>(url)
         )
