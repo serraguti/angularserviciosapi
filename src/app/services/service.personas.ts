@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Persona } from "../models/persona";
 import { firstValueFrom } from "rxjs";
+import { Global } from "../global";
 
 @Injectable()
 export class ServicePersonas {
@@ -12,7 +13,8 @@ export class ServicePersonas {
 
     async getPersonasAsync(): Promise<Persona[]>{
         //necesitamos la url de nuestro servicio
-        let url = "https://apipersonas2026a.azurewebsites.net/api/personas"
+        let request = "api/personas";
+        let url = Global.apipersonas + request
         //devolvemos el primer valor del get
         return firstValueFrom(
             //hacemos la petición con http
