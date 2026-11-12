@@ -1,1 +1,10 @@
-<p>personas-api-component works!</p>
+<h1>Api Personas</h1>
+<button (click)="cargarPersonas()" class="btn btn-info">
+    Mostrar personas
+</button>
+@for (persona of arraypersonas; track persona){
+    <h3 style="color:blue">Nombre {{persona.nombre}}</h3>
+    <p>Email: {{persona.email}}</p>
+    <p>Edad: {{persona.edad}}</p>
+    <p>Id persona: {{persona.idPersona}}</p>
+}

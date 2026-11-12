@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
+import { Persona } from '../../models/persona';
+import { ServicePersonas } from '../../services/service.personas';
 
 @Component({
   selector: 'app-personas-api-component',
@@ -6,4 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './personas-api-component.css',
   templateUrl: './personas-api-component.html',
 })
-export class PersonasApiComponent {}
+export class PersonasApiComponent {
+  arraypersonas: Persona[] = []
+
+  constructor(
+    private _service: ServicePersonas,
+    private _cdr: ChangeDetectorRef
+  ) {}
+
+  async cargarPersonas(): Promise<void> {
+    this.arraypersonas = await this._service.getPersonasAsync();
+    this._cdr.detectChanges();
+  }
+}

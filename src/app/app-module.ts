@@ -10,6 +10,7 @@ import { ServiceClientes } from './services/service.clientes';
 import { ClientesComponent } from './components/clientes-component/clientes-component';
 import { provideHttpClient } from '@angular/common/http';
 import { PersonasApiComponent } from './components/personas-api-component/personas-api-component';
+import { ServicePersonas } from './services/service.personas';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { PersonasApiComponent } from './components/personas-api-component/person
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
-    provideHttpClient(),
+    provideHttpClient(), ServicePersonas,
     ServiceComics, ServiceClientes, provideBrowserGlobalErrorListeners()
   ],
   bootstrap: [App],
