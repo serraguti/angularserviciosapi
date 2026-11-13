@@ -17,6 +17,8 @@ export class CustomersApiComponent implements OnInit {
   ){}
 
   async ngOnInit(): Promise<void> {
+    // let data = await this._service.getCustomersAsync();
+    // console.log(data);
     this.arraycustomers = await this._service.getCustomersAsync();
     this._cdr.detectChanges();
   }

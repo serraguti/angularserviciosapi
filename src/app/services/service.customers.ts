@@ -10,11 +10,11 @@ export class ServiceCustomers {
         private _http: HttpClient
     ){}
 
-    getCustomersAsync(): Promise<Customer[]>{
+    async getCustomersAsync(): Promise<Customer[]> {
         let request = "Customers";
         let url = environment.apicustomers + request;
-        return firstValueFrom(
-            this._http.get<Customer[]>(url)
-        )
+        
+        let response = await firstValueFrom(this._http.get<any>(url));
+        return response.value;
     }
 }
