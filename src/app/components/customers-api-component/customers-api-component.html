@@ -1,1 +1,12 @@
-<p>customers-api-component works!</p>
+<h1 style="color:blue">
+    Api Customers
+</h1>
+<ul>
+    @for (customer of arraycustomers; track customer){
+        <li>Name: {{customer.ContactName}}</li>
+        <li>Company: {{customer.CompanyName}}</li>
+        <li>Title: {{customer.ContactTitle}}</li>
+        <li>Ciudad: {{customer.City}}</li>
+        <li>hr/></li>
+    }
+</ul>
