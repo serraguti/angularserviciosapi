@@ -1,0 +1,12 @@
+<h1>Api Hospitales</h1>
+<table class="table table-bordered">
+    @for (hospital of arrayhospitales; track hospital){
+        <tr>
+            <td>{{hospital.idHospital}}</td>
+            <td>{{hospital.nombre}}</td>
+            <td>{{hospital.direccion}}</td>
+            <td>{{hospital.telefono}}</td>
+            <td>{{hospital.camas}}</td>
+        </tr>
+    }
+</table>

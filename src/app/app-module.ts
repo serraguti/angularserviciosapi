@@ -12,6 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { PersonasApiComponent } from './components/personas-api-component/personas-api-component';
 import { ServicePersonas } from './services/service.personas';
 import { FormsModule } from '@angular/forms';
+import { HospitalesApiComponent } from './components/hospitales-api-component/hospitales-api-component';
+import { ServiceHospitales } from './services/service.hospitales';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,16 @@ import { FormsModule } from '@angular/forms';
     ComicsComponent,
     ClientesComponent,
     PersonasApiComponent,
+    HospitalesApiComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule
-    , FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
-    provideHttpClient(), ServicePersonas,
-    ServiceComics, ServiceClientes, provideBrowserGlobalErrorListeners()
+    provideHttpClient(),
+    ServiceHospitales,
+    ServicePersonas,
+    ServiceComics,
+    ServiceClientes,
+    provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App],
 })
