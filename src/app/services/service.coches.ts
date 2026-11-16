@@ -17,4 +17,12 @@ export class ServiceCoches {
             this._http.get<Coche[]>(url)
         )
     }
+
+    async findCocheAsync(idcoche: number): Promise<Coche> {
+        let request = "api/coches/findcoche/" + idcoche;
+        let url = environment.apicoches + request;
+        return firstValueFrom(
+            this._http.get<Coche>(url)
+        )
+    }
 }

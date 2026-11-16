@@ -1,7 +1,19 @@
 <h1>Api coches</h1>
+<form #form="ngForm">
+    Id coche:
+    <input type="number" name="cajaid" #cajaid/>
+    <button (click)="buscarCoche()">
+        Buscar coche
+    </button>
+</form>
+
+@if (car){
+    <p>Coche: {{car.marca}} {{car.modelo}}</p>
+    <p>Conductor {{car.conductor}}</p>
+    <img src="{{car.imagen}}" alt="{{car.marca}} {{car.modelo}}"/>
+}
 @for (coche of arraycoches; track coche){
     <p>Coche: {{coche.marca}} {{coche.modelo}}</p>
     <p>Conductor {{coche.conductor}}</p>
-    <img src="{{coche.imagen}}"
-        style="width: 150px; height: 150px;"/>
+    <img src="{{coche.imagen}}" alt="{{coche.marca}} {{coche.modelo}}"/>
 }
