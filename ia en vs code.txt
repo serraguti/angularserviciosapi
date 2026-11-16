@@ -1,0 +1,7 @@
+1) Necesito que os deis de alta en la página Nvidia Nim for developers
+
+2) Ejecutamos el siguiente comando en Power Shell:
+
+& ([scriptblock]::Create((irm "https://raw.githubusercontent.com/Alishahryar1/free-claude-code/main/scripts/install.ps1")))
+
+
