@@ -1,0 +1,10 @@
+<p>menu-coches-component works!</p>
+<ul>
+    @for (coche of arraycoches; track coche){
+        <li>
+            <a [routerLink]="['/detallescoche', coche.idCoche]">
+                Coche {{coche.idCoche}}
+            </a>
+        </li>
+    }
+</ul>
