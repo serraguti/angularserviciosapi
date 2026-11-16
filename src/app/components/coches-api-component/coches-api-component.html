@@ -1,0 +1,7 @@
+<h1>Api coches</h1>
+@for (coche of arraycoches; track coche){
+    <p>Coche: {{coche.marca}} {{coche.modelo}}</p>
+    <p>Conductor {{coche.conductor}}</p>
+    <img src="{{coche.imagen}}"
+        style="width: 150px; height: 150px;"/>
+}

@@ -16,6 +16,8 @@ import { HospitalesApiComponent } from './components/hospitales-api-component/ho
 import { ServiceHospitales } from './services/service.hospitales';
 import { ServiceCustomers } from './services/service.customers';
 import { CustomersApiComponent } from './components/customers-api-component/customers-api-component';
+import { ServiceCoches } from './services/service.coches';
+import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { CustomersApiComponent } from './components/customers-api-component/cust
     PersonasApiComponent,
     HospitalesApiComponent,
     CustomersApiComponent,
+    CochesApiComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideHttpClient(),
+    ServiceCoches,
     ServiceCustomers,
     ServiceHospitales,
     ServicePersonas,
