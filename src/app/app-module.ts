@@ -18,6 +18,7 @@ import { ServiceCustomers } from './services/service.customers';
 import { CustomersApiComponent } from './components/customers-api-component/customers-api-component';
 import { ServiceCoches } from './services/service.coches';
 import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
+import { DetalleCocheComponent } from './components/detalle-coche-component/detalle-coche-component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { CochesApiComponent } from './components/coches-api-component/coches-api
     HospitalesApiComponent,
     CustomersApiComponent,
     CochesApiComponent,
+    DetalleCocheComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
