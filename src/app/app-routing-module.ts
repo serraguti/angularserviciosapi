@@ -9,6 +9,8 @@ import { CustomersApiComponent } from './components/customers-api-component/cust
 import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
 import { DetalleCocheComponent } from './components/detalle-coche-component/detalle-coche-component';
 import { MenuCochesComponent } from './components/menu-coches-component/menu-coches-component';
+import { DetalleHospitalComponent } from './components/detalle-hospital-component/detalle-hospital-component';
+import { MenuHospitalesComponent } from './components/menu-hospitales-component/menu-hospitales-component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent},
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: "coches", component: CochesApiComponent },
   { path: "detallescoche/:idcoche", component: DetalleCocheComponent },
   { path: "menucoches", component: MenuCochesComponent },
+  { path: "detallehospital/:idhospital", component: DetalleHospitalComponent},
+  { path: "menuhospitales", component: MenuHospitalesComponent},
 ];
 
 @NgModule({

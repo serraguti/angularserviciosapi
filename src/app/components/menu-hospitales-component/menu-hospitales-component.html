@@ -1,0 +1,10 @@
+<p>menu-hospitales-component works!</p>
+<ul>
+    @for (hospital of arrayhospitales; track hospital){
+        <li>
+            <a [routerLink]="['/detallehospital', hospital.idHospital]">
+                {{hospital.nombre}}
+            </a>
+        </li>
+    }
+</ul>

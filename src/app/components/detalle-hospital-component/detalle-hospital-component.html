@@ -1,0 +1,17 @@
+<h1 style="color:blue">{{mensaje}}</h1>
+@if (hospital){
+    <ul class="list-group">
+        <li class="list-group-item">
+            Nombre: {{hospital.nombre}}
+        </li>
+        <li class="list-group-item">
+            Dirección: {{hospital.direccion}}
+        </li>       
+        <li class="list-group-item">
+            Teléfono: {{hospital.telefono}}
+        </li>        
+        <li class="list-group-item">
+            Camas: {{hospital.camas}}
+        </li>        
+    </ul>
+}

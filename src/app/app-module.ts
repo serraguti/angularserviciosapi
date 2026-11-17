@@ -20,6 +20,8 @@ import { ServiceCoches } from './services/service.coches';
 import { CochesApiComponent } from './components/coches-api-component/coches-api-component';
 import { DetalleCocheComponent } from './components/detalle-coche-component/detalle-coche-component';
 import { MenuCochesComponent } from './components/menu-coches-component/menu-coches-component';
+import { DetalleHospitalComponent } from './components/detalle-hospital-component/detalle-hospital-component';
+import { MenuHospitalesComponent } from './components/menu-hospitales-component/menu-hospitales-component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { MenuCochesComponent } from './components/menu-coches-component/menu-coc
     CochesApiComponent,
     DetalleCocheComponent,
     MenuCochesComponent,
+    DetalleHospitalComponent,
+    MenuHospitalesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
